@@ -27,22 +27,22 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 
 | Chỉ số | Trước sửa | Sau sửa nếu có |
 |---|---:|---:|
-| TP |438 | |
-| FP |367 | |
-| FN |215 | |
-| Precision |0.5441 | |
-| Recall |0.6708 | |
-| F1 |0.6008 | |
-| mean_iou_of_matches |0.8093 | |
-| passed |pass | |
+| TP |440 |438 |
+| FP |401 |367 |
+| FN |213 |215 |
+| Precision |0.5232 |0.5441 |
+| Recall |0.6738 |0.6708 |
+| F1 |0.589 |0.6008 |
+| mean_iou_of_matches |0.7 |0.8093 |
+| passed |false |false |
 
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
+Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ. 
 
 ## 5. Kết quả YOLO
 
-- Runtime, GPU/CPU, phiên bản Ultralytics và Torch:
-- Các tham số thay đổi so với notebook nếu có và lý do:
-- Đường dẫn best checkpoint trong phiên chạy:
+- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: Google Colab, GPU T4, Ultralytics 8.4.208, Torch 2.14.1+
+- Các tham số thay đổi so với notebook nếu có và lý do: giữ nguyên notebook (yolo26n.pt, epochs=50, imgsz=640, batch=-1, seed=20260909), không thay đổi.
+- Đường dẫn best checkpoint trong phiên chạy:/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt. Theo results.csv, checkpoint tốt nhất ứng với epoch 2 (mAP50-95 = 0.2008), còn epoch 50 cho mAP50-95 = 0.1695.
 
 | Chỉ số trên 10 ảnh eval | Giá trị |
 |---|---:|
