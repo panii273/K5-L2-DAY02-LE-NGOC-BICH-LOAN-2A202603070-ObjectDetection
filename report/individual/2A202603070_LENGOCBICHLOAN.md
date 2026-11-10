@@ -40,7 +40,7 @@ Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi �
 
 ## 5. Kết quả YOLO
 
-- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: Google Colab, GPU T4, Ultralytics 8.4.208, Torch 2.14.1+
+- Runtime, GPU/CPU, phiên bản Ultralytics và Torch: Google Colab, GPU T4, Ultralytics 8.4.208, Torch 2.14.1+cu130
 - Các tham số thay đổi so với notebook nếu có và lý do: giữ nguyên notebook (yolo26n.pt, epochs=50, imgsz=640, batch=-1, seed=20260909), không thay đổi.
 - Đường dẫn best checkpoint trong phiên chạy:/content/Day2-Lab/outputs/yolo26_runs/vehicle_annotation/weights/best.pt. Theo results.csv, checkpoint tốt nhất ứng với epoch 2 (mAP50-95 = 0.2008), còn epoch 50 cho mAP50-95 = 0.1695.
 
